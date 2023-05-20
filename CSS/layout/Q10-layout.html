@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        }
+        body{
+            padding: 2rem;
+        }
+    .container{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 2rem;
+    }
+    .first{
+        background-color: rgb(155, 155, 255);
+        height: 5rem;
+    }
+    .second{
+        background-color: rgb(142, 142, 142);
+        height: 5rem;
+        grid-column-start: 2;
+        grid-column-end: 4 ;
+    }
+    .third{
+        background-color: rgb(79, 79, 79);
+        height: 25rem;
+        grid-column-start: 1;
+        grid-column-end: 4 ;
+        margin: 2rem 0;
+    }
+    .seventh{
+        background-color: rgb(187, 187, 187);
+        height: 22rem;
+        grid-column-start: 1;
+        grid-column-end: 4 ;
+        margin: 2rem 0;
+    }
+    .blue-block{
+        background-color: rgb(131, 230, 250);
+        height: 22rem;
+    }
+    .forth{
+        grid-column-start: 1;
+        grid-column-end: 2 ;
+    }
+    .fifth{
+        grid-column-start: 2;
+        grid-column-end: 3 ;
+    }
+    .sixth{
+        grid-column-start: 3;
+        grid-column-end: 4 ;
+    }
+
+
+    @media screen and (max-width: 768px) {
+    .container{
+        column-gap: 1rem;
+    }
+        .first{
+        height: 3rem;
+    }
+    .second{
+        height: 3rem;
+    }
+    .third{
+        height: 10rem;
+        margin: 1rem 0;
+    }
+    .blue-block{
+        height: 12rem;
+    }
+    .seventh{
+        height: 10rem;
+        margin: 1rem 0;
+    }
+
+    }
+
+    @media screen and (max-width: 430px) {
+        body{
+            padding: 0.8rem;
+        }
+    .container{
+        column-gap: 0.5rem;
+    }
+        .first{
+        height:6rem;
+    }
+    .second{
+        height:6rem;
+    }
+    .third{
+        height: 10rem;
+        margin: 0.5rem 0;
+    }
+    .blue-block{
+        height: 6rem;
+        grid-column-start: 1;
+        grid-column-end: 4;
+        margin: 0.5rem 0;
+    }
+    .seventh{
+        height: 10rem;
+        margin: 1rem 0;
+    }
+
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="first"></div>
+        <div class="second"></div>
+        <div class="third"></div>
+        <div class="forth blue-block"></div>
+        <div class="fifth blue-block"></div>
+        <div class="sixth blue-block"></div>
+        <div class="seventh"></div>
+    </div>
+</body>
+</html>
