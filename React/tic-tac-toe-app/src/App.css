@@ -1,0 +1,68 @@
+.tic-tac-toe {
+  max-width: 300px;
+  margin: 0 auto;
+  text-align: center;
+  background-color: #f1f1f1;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  margin-bottom: 10px;
+}
+
+.cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 36px;
+  background-color: #fff;
+  border: 2px solid #ccc;
+  cursor: pointer;
+  min-height: 2rem;
+}
+
+.cell:hover {
+  background-color: #eee;
+}
+
+.X {
+  color: #f44336;
+}
+
+.O {
+  color: #f3c921;
+}
+
+.winner {
+  margin-bottom: 10px;
+}
+
+.winner p {
+  font-weight: bold;
+}
+
+.draw {
+  margin-bottom: 10px;
+}
+
+.draw p {
+  font-weight: bold;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #163498;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.current-player {
+  margin-bottom: 10px;
+}
