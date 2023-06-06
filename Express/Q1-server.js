@@ -5,12 +5,10 @@ const app = express();
 const posts = [
   { id: 1, title: 'Post 1', content: 'Content of Post 1' },
   { id: 2, title: 'Post 2', content: 'Content of Post 2' },
-  // ... add more posts here
 ];
 
-// Endpoint to get 20 posts
+
 app.get('/post', (req, res) => {
-  // Get the first 20 posts
   const twentyPosts = posts.slice(0, 20);
   res.json({success:true, twentyPosts});
 });

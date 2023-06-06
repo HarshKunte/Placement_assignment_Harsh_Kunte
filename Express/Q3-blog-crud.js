@@ -8,7 +8,6 @@ app.use(bodyParser.json());
 let blogs = [
   { id: 1, title: 'Blog1', content: 'Content of the first blog' },
   { id: 2, title: 'Second Blog', content: 'Content of the second blog' },
-  // ... add more blogs here
 ];
 
 // Get all blogs
