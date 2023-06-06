@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Debouncing Example</title>
+  <style>
+    .container {
+      margin: 20px;
+    }
+    input {
+      width: 300px;
+      padding: 10px;
+      font-size: 16px;
+    }
+    p {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Debouncing Example</h1>
+    <input type="text" id="searchInput" placeholder="Search...">
+    <p id="result"></p>
+  </div>
+
+  <script>
+    function debounce(func, delay) {
+      let timerId;
+
+      return function(...args) {
+        if (timerId) {
+          clearTimeout(timerId);
+        }
+
+        timerId = setTimeout(() => {
+          func.apply(this, args);
+          timerId = null;
+        }, delay);
+      };
+    }
+
+    function search() {
+      const input = document.getElementById('searchInput');
+      const result = document.getElementById('result');
+      
+      result.textContent = 'Searching for: ' + input.value;
+    }
+
+    const debounceSearch = debounce(search, 500);
+
+    document.getElementById('searchInput').addEventListener('input', debounceSearch);
+  </script>
+</body>
+</html>
